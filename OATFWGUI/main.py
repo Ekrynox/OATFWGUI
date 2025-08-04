@@ -63,7 +63,8 @@ the {install_dir.resolve()} folder somewhere with less characters in the path.''
 
     # Putting the platformio core directory in a temporary folder is only needed because
     # Windows doesn't support long path names... :/
-    tempdir_path = Path(tempfile.gettempdir())
+    #tempdir_path = Path(tempfile.gettempdir())
+    tempdir_path = Path(install_dir)
     pio_prefix_str = '.pioOATFWGUI'
     pio_core_dir = Path(tempdir_path, f'{pio_prefix_str}{__version__}')
     log.info(f'Setting PLATFORMIO_CORE_DIR to {pio_core_dir}')
