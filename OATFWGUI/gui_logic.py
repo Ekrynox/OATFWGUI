@@ -169,6 +169,7 @@ class BusinessLogic:
         releases_list = [
             FWVersion('develop',
                       'https://github.com/OpenAstroTech/OpenAstroTracker-Firmware/archive/refs/heads/develop.zip'),
+            FWVersion('oae-fw', "https://github.com/OpenAstroTech/OpenAstroTracker-Firmware/archive/refs/heads/oae-fw.zip")
         ]
         if r.status_code != requests.codes.ok:
             log.error(f'Failed to grab latest FW versions: {r.status_code} {r.reason} {r.text}')
